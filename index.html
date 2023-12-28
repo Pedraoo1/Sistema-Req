@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+    <title>Requisição</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <H1>Criador de Requisição</H1>
+            <img src="./images/folha de acanto sem fundo.png" alt="Folha de Acanto" />
+        </header>
+        <main>
+            <form> Dados da quisição:
+                <input type="number" placeholder="Número REQ">
+                <label for="tipo-empenho">Tipo de empenho:</label>
+                <select id="tipo-empenho">
+                    <option>Global</option>
+                    <option>Ordinário</option>
+                    <option>Estimativo</option>
+                </select>
+                <input type="text" placeholder="RSP">
+                <input type="text" placeholder="Órgão Gerenciador (UASG)">
+                <input type="text" placeholder="Condição">
+            </form>
+            <form> Dados da Empresa:
+                <input type="text" placeholder="Nome da empresa">
+                <input type="text" placeholder="CNPJ">
+                <input type="tel" placeholder="Telefone">
+                <input type="email" placeholder="E-mail">
+            </form>
+            <form id="dados-dos-agentes">Dados dos Agentes
+                <div>
+                    <input type="text" placeholder="Nome do Aprov">
+                    <input type="number" placeholder="CPF">
+                    <select>
+                        <option>2º Ten</option>
+                        <option>1º Ten</option>
+                        <option>Cap</option>
+                        <option>Maj</option>
+                        <option>TC</option>
+                        <option>Cel</option>
+                    </select>
+                </div>
+                <div>
+                    <input type="text" placeholder="Nome do Fiscal">
+                    <input type="number" placeholder="CPF">
+                    <select>
+                        <option>TC</option>
+                        <option>Cel</option>
+                        <option>Cap</option>
+                        <option>Maj</option>
+                    </select>
+                </div>
+                <div>
+                    <input type="text" placeholder="Nome do OD">
+                    <input type="number" placeholder="CPF">
+                    <select>
+                        <option>TC</option>
+                        <option>Cel</option>
+                        <option>Cap</option>
+                        <option>Maj</option>
+                    </select>
+                </div>
+            </form>
+            <form> Dados Orçamentários: 
+                <input type="text" placeholder="PI">
+                <input type="text" placeholder="NC">
+                <select>
+                    <option>339030 - 07 - Gêneros Alimentícios</option>
+                </select>
+            </form>
+            <div>
+                <form>
+                    <input type="number" placeholder="Item">
+                    <input type="text" placeholder="Descrição">
+                    <input type="text" placeholder="Und">
+                    <input type="number" placeholder="QTD">
+                    <input type="number" placeholder="Valor Unitário">
+                    <button type="submit">Adicionar +</button>
+                </form>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Item</td>
+                            <td>Descrição</td>
+                            <td>Unidade</td>
+                            <td>Qtd</td>
+                            <td>Valor Unitário</td>
+                            <td>Valor Total</td>
+                        </tr>
+                    </thead>
+                </table>
+
+
+
+
+
+
+
+
+            </div>
+        </main>
+        <footer>
+            <a>Voltar</a>
+            <a>Avançar</a>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    background-color: #0D0D0D;
+    margin-bottom: 40px;
+    justify-content: center;
+    font-weight: bold;
+    color: #F2CC0C;
+    border-bottom: 5px solid #F2CC0C;
+}
+
+header img{
+    height: 80px;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+    margin-top: 50px;
+    background-color: #0D0D0D;
+    padding: 20px;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    height: 65px;
+    font-weight: bold;
+    font-size: 24px;
+    color: #F2CC0C;
+    border-top: 5px solid #F2CC0C;
+}
+
+footer a{
+    cursor: pointer;
+}
+
+main form{
+    margin-bottom: 25px;
+    padding: 8px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+main form input,
+main form select{
+    padding: 8px;
+}
+
+.container{
+    width: 100%;
+    margin: 0px auto;
+    text-align: center;
+}
+
+#dados-dos-agentes div select{
+    margin-bottom: 5px;
+    width: 80px;
+}
+
+table{
+    display: flex;
+    justify-content: center;
+}
+
+table tr,
+table td{
+    padding: 8px;
+}
