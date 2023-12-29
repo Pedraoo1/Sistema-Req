@@ -73,7 +73,23 @@ table{
     justify-content: center;
 }
 
-table tr,
-table td{
+table tr{
     padding: 8px;
+}
+
+table td,
+table th{
+    padding: 8px;
+    border-bottom: 1px solid black;
+}
+
+#button{
+    height: 35px;
+    padding: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: green;
+    border: none;
+    color: white;
+    cursor: pointer;
 }

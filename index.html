@@ -17,28 +17,28 @@
         </header>
         <main>
             <form> Dados da quisição:
-                <input type="number" placeholder="Número REQ">
+                <input type="number" id="numeroReq" placeholder="Número REQ">
                 <label for="tipo-empenho">Tipo de empenho:</label>
                 <select id="tipo-empenho">
                     <option>Global</option>
                     <option>Ordinário</option>
                     <option>Estimativo</option>
                 </select>
-                <input type="text" placeholder="RSP">
-                <input type="text" placeholder="Órgão Gerenciador (UASG)">
-                <input type="text" placeholder="Condição">
+                <input type="text" id="RSP" placeholder="RSP">
+                <input type="text" id="OrgaoGerenciador" placeholder="Órgão Gerenciador (UASG)">
+                <input type="text" id="condicao" placeholder="Condição">
             </form>
             <form> Dados da Empresa:
-                <input type="text" placeholder="Nome da empresa">
-                <input type="text" placeholder="CNPJ">
-                <input type="tel" placeholder="Telefone">
-                <input type="email" placeholder="E-mail">
+                <input type="text" id="nomeEmpresa" placeholder="Nome da empresa">
+                <input type="text" id="CNPJ" placeholder="CNPJ">
+                <input type="tel" id="tel" placeholder="Telefone">
+                <input type="email" id="mail" placeholder="E-mail">
             </form>
             <form id="dados-dos-agentes">Dados dos Agentes
                 <div>
-                    <input type="text" placeholder="Nome do Aprov">
-                    <input type="number" placeholder="CPF">
-                    <select>
+                    <input type="text" id="nomeAprov" placeholder="Nome do Aprov">
+                    <input type="number" id="cpfAprov" placeholder="CPF">
+                    <select id="postoAprov">
                         <option>2º Ten</option>
                         <option>1º Ten</option>
                         <option>Cap</option>
@@ -48,44 +48,47 @@
                     </select>
                 </div>
                 <div>
-                    <input type="text" placeholder="Nome do Fiscal">
-                    <input type="number" placeholder="CPF">
-                    <select>
-                        <option>TC</option>
-                        <option>Cel</option>
+                    <input type="text" id="nomeFiscal" placeholder="Nome do Fiscal">
+                    <input type="number" id="cpfFiscal" placeholder="CPF">
+                    <select id="postoFiscal">
+                        <option>2º Ten</option>
+                        <option>1º Ten</option>
                         <option>Cap</option>
                         <option>Maj</option>
+                        <option>TC</option>
+                        <option>Cel</option>
                     </select>
                 </div>
                 <div>
-                    <input type="text" placeholder="Nome do OD">
-                    <input type="number" placeholder="CPF">
-                    <select>
-                        <option>TC</option>
-                        <option>Cel</option>
+                    <input type="text" id="nomeOd" placeholder="Nome do OD">
+                    <input type="number" id="cpfOd" placeholder="CPF">
+                    <select id="postoOd">
+                        <option>2º Ten</option>
+                        <option>1º Ten</option>
                         <option>Cap</option>
                         <option>Maj</option>
+                        <option>TC</option>
+                        <option>Cel</option>
                     </select>
                 </div>
             </form>
             <form> Dados Orçamentários: 
-                <input type="text" placeholder="PI">
-                <input type="text" placeholder="NC">
-                <select>
+                <input type="text" id="PI" placeholder="PI">
+                <input type="text" id="NC" placeholder="NC">
+                <select id="NP">
                     <option>339030 - 07 - Gêneros Alimentícios</option>
                 </select>
             </form>
             <div>
                 <form>
-                    <input type="number" placeholder="Item">
-                    <input type="text" placeholder="Descrição">
-                    <input type="text" placeholder="Und">
-                    <input type="number" placeholder="QTD">
-                    <input type="number" placeholder="Valor Unitário">
-                    <button type="submit">Adicionar +</button>
+                    <input type="number" id="item" placeholder="Item">
+                    <input type="text" id="descri" placeholder="Descrição">
+                    <input type="text" id="und" placeholder="Und">
+                    <input type="number" id="QTD" placeholder="QTD">
+                    <input type="number" id="Vunit" placeholder="Valor Unitário">
+                    <button id="button" onclick="adicionar()">Adicionar +</button>
                 </form>
-                <table>
-                    <thead>
+                <table class="table" cellspacing="10">
                         <tr>
                             <td>Item</td>
                             <td>Descrição</td>
@@ -94,17 +97,17 @@
                             <td>Valor Unitário</td>
                             <td>Valor Total</td>
                         </tr>
-                    </thead>
+                        <tr>
+                            <th>115</th>
+                            <th>Banana</th>
+                            <th>Und</th>
+                            <th>150</th>
+                            <th>R$ 10,00</th>
+                            <th>R$ 1.500</th>
+                        </tr>
                 </table>
-
-
-
-
-
-
-
-
             </div>
+        <script src="./main.js"></script>
         </main>
         <footer>
             <a>Voltar</a>
