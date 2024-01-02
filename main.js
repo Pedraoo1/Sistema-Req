@@ -1,4 +1,5 @@
 let adicionados = 0;
+let conjuntoValoresTotais = [];
 
 function adicionar(){
 
@@ -8,7 +9,16 @@ function adicionar(){
     let qtd = document.getElementById("QTD").value;
     let valorUnitario = document.getElementById("Vunit").value;
     let valorTotal = (valorUnitario * qtd);
-    
+    conjuntoValoresTotais.push(valorTotal);
+
+    document.getElementById("item").value = "";
+    document.getElementById("descri").value = "";
+    document.getElementById("und").value = "";
+    document.getElementById("QTD").value = "";
+    document.getElementById("Vunit").value = "";
+
+
+
     adicionados += 1;
 
     let tabela = document.querySelector(".table tbody"); 
@@ -23,10 +33,9 @@ function adicionar(){
                     </tr>`;
 
     tabela.insertAdjacentHTML('beforeend', novaLinha);
-
-    exibirItens();    
+    exibirItens();   
+    somarValores();
 }
-
 
 function coletarValoresCorpo(){
     let numeroReq = document.getElementById("numeroReq").value; 
@@ -83,6 +92,9 @@ function removerItem(){
     let itemARemover = document.getElementById(`${adicionados}`);
     itemARemover.remove();
     adicionados -= 1;
+
+    conjuntoValoresTotais.pop();
+    somarValores();
 }
 
 function exibirItens(){
@@ -94,4 +106,15 @@ function exibirItens(){
 
     let botaoRemover = document.querySelector("#button-remover");
     botaoRemover.classList.remove("naoAdicionado");
+}
+
+function somarValores(){
+    let somaTotal = 0;
+
+    for (var i =0; i<conjuntoValoresTotais.length; i++){
+        somaTotal += conjuntoValoresTotais[i];
+    }
+
+    let valorTotalReq = document.getElementById("valor-total");
+    valorTotalReq.innerHTML = `Valor Total da Requisição: R$ ${somaTotal}`;
 }
