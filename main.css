@@ -93,3 +93,22 @@ table th{
     color: white;
     cursor: pointer;
 }
+
+#button-remover{
+    height: 35px;
+    padding: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: red;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+h2{
+    margin: 35px;
+}
+
+.naoAdicionado{
+    display: none;
+}

@@ -86,9 +86,9 @@
                     <input type="text" id="und" placeholder="Und">
                     <input type="number" id="QTD" placeholder="QTD">
                     <input type="number" id="Vunit" placeholder="Valor Unitário">
-                    <button id="button" onclick="adicionar()">Adicionar +</button>
+                    <button type="button" id="button" onclick="adicionar()">Adicionar +</button>
                 </form>
-                <table class="table" cellspacing="10">
+                <table class="table naoAdicionado" cellspacing="10">
                         <tr>
                             <td>Item</td>
                             <td>Descrição</td>
@@ -97,15 +97,9 @@
                             <td>Valor Unitário</td>
                             <td>Valor Total</td>
                         </tr>
-                        <tr>
-                            <th>115</th>
-                            <th>Banana</th>
-                            <th>Und</th>
-                            <th>150</th>
-                            <th>R$ 10,00</th>
-                            <th>R$ 1.500</th>
-                        </tr>
                 </table>
+                <h2 id="valor-total" class="naoAdicionado">Valor total da requisição: R$ 25.000</h2>
+                <button class="naoAdicionado" type="button" id="button-remover" onclick="removerItem()">Remover ùltimo Item</button>
             </div>
         <script src="./main.js"></script>
         </main>

@@ -11,7 +11,7 @@ function adicionar(){
     
     adicionados += 1;
 
-    let tabela = document.querySelector(".table"); 
+    let tabela = document.querySelector(".table tbody"); 
     
     let novaLinha = `<tr id="${adicionados}">
                         <th>${item}</th>
@@ -19,14 +19,16 @@ function adicionar(){
                         <th>${und}</th>
                         <th>${qtd}</th>
                         <th>${valorUnitario}</th>
-                        <th>${valorTotal}</th>
+                        <th>R$ ${valorTotal}</th>
                     </tr>`;
 
-    tabela.innerHTML += novaLinha;
+    tabela.insertAdjacentHTML('beforeend', novaLinha);
+
+    exibirItens();    
 }
 
 
-function coletarValores(){
+function coletarValoresCorpo(){
     let numeroReq = document.getElementById("numeroReq").value; 
     let tipoEmpenho = document.getElementById("tipo-empenho").value; 
     let RSP = document.getElementById("RSP").value;
@@ -77,3 +79,19 @@ function coletarValores(){
     console.log(np);
 }
 
+function removerItem(){
+    let itemARemover = document.getElementById(`${adicionados}`);
+    itemARemover.remove();
+    adicionados -= 1;
+}
+
+function exibirItens(){
+    let tabelaCorpo = document.querySelector(".table");
+    tabelaCorpo.classList.remove("naoAdicionado");
+
+    let valorTotalReq = document.querySelector("#valor-total");
+    valorTotalReq.classList.remove("naoAdicionado");
+
+    let botaoRemover = document.querySelector("#button-remover");
+    botaoRemover.classList.remove("naoAdicionado");
+}
